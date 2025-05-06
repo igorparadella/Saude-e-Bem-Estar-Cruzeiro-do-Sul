@@ -1,124 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saúde e Bem-Estar - Cruzeiro do Sul</title>
-  <!-- Link do Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .hero-section {
-      background-color: #f4f4f4;
-      padding: 60px 0;
-    }
-    .card-body {
-      background-color: #e9ecef;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Estudantil - Cruzeiro do Sul</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Barra de navegação -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Saúde Cruzeiro do Sul</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#exercicios">Exercícios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#alimentacao">Alimentação</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#dicas">Dicas</a>
-          </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Saúde Estudantil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#exercicios">Exercícios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#alimentacao">Alimentação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dicas">Dicas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Bem-vindo ao Saúde Estudantil!</h1>
+        <p class="lead">Aqui você encontra dicas para melhorar sua saúde física e ter uma vida mais ativa e saudável.</p>
+    </div>
+
+    <!-- Exercícios -->
+    <div class="container" id="exercicios">
+        <h2 class="my-4">Exercícios Físicos Simples</h2>
+        <p>Aqui você encontra uma série de exercícios fáceis e rápidos que podem ser feitos no seu dia a dia.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="exercicio1.jpg" class="card-img-top" alt="Exercício 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Flexões</h5>
+                        <p class="card-text">Fortaleça o peito e os braços com esse exercício simples.</p>
+                        <a href="#" class="btn btn-primary">Veja como fazer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="exercicio2.jpg" class="card-img-top" alt="Exercício 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Agachamentos</h5>
+                        <p class="card-text">Melhore a resistência das pernas com agachamentos simples.</p>
+                        <a href="#" class="btn btn-primary">Veja como fazer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="exercicio3.jpg" class="card-img-top" alt="Exercício 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Abdominais</h5>
+                        <p class="card-text">Trabalhe seu abdômen com exercícios rápidos.</p>
+                        <a href="#" class="btn btn-primary">Veja como fazer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alimentação -->
+    <div class="container" id="alimentacao">
+        <h2 class="my-4">Alimentação Saudável</h2>
+        <p>Mantenha uma alimentação equilibrada com estas dicas simples para o seu dia a dia.</p>
+        <ul>
+            <li>Evite alimentos processados e escolha opções naturais.</li>
+            <li>Coma mais frutas e vegetais frescos.</li>
+            <li>Mantenha-se hidratado, bebendo pelo menos 2 litros de água por dia.</li>
         </ul>
-      </div>
     </div>
-  </nav>
 
-  <!-- Seção de Introdução -->
-  <section id="home" class="hero-section text-center">
-    <div class="container">
-      <h1 class="display-4">Melhore sua Saúde Física</h1>
-      <p class="lead">Dicas práticas e fáceis para estudantes da Cruzeiro do Sul viverem de forma mais ativa e saudável.</p>
+    <!-- Dicas de Saúde -->
+    <div class="container" id="dicas">
+        <h2 class="my-4">Dicas para uma Vida Ativa</h2>
+        <p>Pequenas mudanças no seu dia podem aumentar sua qualidade de vida.</p>
+        <ul>
+            <li>Levante-se a cada 30 minutos para caminhar um pouco.</li>
+            <li>Durma bem e tenha uma rotina de descanso adequada.</li>
+            <li>Procure incluir atividades físicas no seu dia, mesmo que sejam curtas.</li>
+        </ul>
     </div>
-  </section>
 
-  <!-- Seção de Exercícios -->
-  <section id="exercicios" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Exercícios Físicos</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Exercício 1">
-            <div class="card-body">
-              <h5 class="card-title">Exercício A</h5>
-              <p class="card-text">Descrição breve sobre como realizar o exercício A de forma correta.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Exercício 2">
-            <div class="card-body">
-              <h5 class="card-title">Exercício B</h5>
-              <p class="card-text">Descrição breve sobre como realizar o exercício B de forma correta.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Exercício 3">
-            <div class="card-body">
-              <h5 class="card-title">Exercício C</h5>
-              <p class="card-text">Descrição breve sobre como realizar o exercício C de forma correta.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2025 Saúde Estudantil - Todos os direitos reservados</p>
+    </footer>
 
-  <!-- Seção de Alimentação -->
-  <section id="alimentacao" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Alimentação Saudável</h2>
-      <p>Manter uma alimentação balanceada é fundamental para a saúde física. Aqui estão algumas dicas:</p>
-      <ul>
-        <li>Inclua mais frutas e vegetais na sua alimentação.</li>
-        <li>Evite alimentos processados e ricos em açúcar.</li>
-        <li>Faça refeições regulares e beba bastante água.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Seção de Dicas -->
-  <section id="dicas" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Dicas de Bem-Estar</h2>
-      <ul>
-        <li>Durma pelo menos 7-8 horas por noite para garantir recuperação e saúde mental.</li>
-        <li>Evite o sedentarismo, faça pequenas pausas para caminhar ao longo do dia.</li>
-        <li>Pratique atividades ao ar livre, como caminhada ou corrida, para melhorar a resistência e o humor.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2025 Saúde Cruzeiro do Sul. Todos os direitos reservados.</p>
-  </footer>
-
-  <!-- Script do Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
