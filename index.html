@@ -81,6 +81,7 @@
           <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#exercicios">Exercícios</a></li>
           <li class="nav-item"><a class="nav-link" href="#alimentacao">Nutrição</a></li>
+          <li class="nav-item"><a class="nav-link" href="#imc">Calculadora IMC</a></li>
           <li class="nav-item"><a class="nav-link" href="#dicas">Dicas</a></li>
         </ul>
       </div>
@@ -106,7 +107,6 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100 card-hover">
-            <img src="https://source.unsplash.com/800x600/?yoga" class="card-img-top" alt="Yoga">
             <div class="card-body">
               <div class="icon-box">
                 <i class="fas fa-spa text-white fs-4"></i>
@@ -122,7 +122,6 @@
         </div>
         <div class="col-md-4">
           <div class="card h-100 card-hover">
-            <img src="https://source.unsplash.com/800x600/?running" class="card-img-top" alt="Corrida">
             <div class="card-body">
               <div class="icon-box">
                 <i class="fas fa-running text-white fs-4"></i>
@@ -138,7 +137,6 @@
         </div>
         <div class="col-md-4">
           <div class="card h-100 card-hover">
-            <img src="https://source.unsplash.com/800x600/?stretching" class="card-img-top" alt="Alongamento">
             <div class="card-body">
               <div class="icon-box">
                 <i class="fas fa-dumbbell text-white fs-4"></i>
@@ -197,6 +195,31 @@
     </div><br><br>
   </section>
 
+  <!-- Calculadora de IMC -->
+<section id="imc" class="py-5 bg-light"><br><br>
+  <div class="container">
+    <h2 class="text-center mb-4">Calculadora de IMC</h2>
+    <p class="text-center mb-5">Descubra se seu Índice de Massa Corporal está dentro do ideal.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4 shadow">
+          <div class="mb-3">
+            <label for="peso" class="form-label">Peso (kg)</label>
+            <input type="number" class="form-control" id="peso" placeholder="Ex: 70" required>
+          </div>
+          <div class="mb-3">
+            <label for="altura" class="form-label">Altura (m)</label>
+            <input type="number" step="0.01" class="form-control" id="altura" placeholder="Ex: 1.75" required>
+          </div>
+          <button onclick="calcularIMC()" class="btn btn-success w-100">Calcular IMC</button>
+          <div id="resultadoIMC" class="mt-3 text-center fw-bold"></div>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+</section>
+
+
   <!-- Dicas -->
   <section id="dicas" class="py-5"><br><br>
     <div class="container">
@@ -205,8 +228,7 @@
         <div class="col">
           <div class="card h-100">
             <div class="card-body">
-              <i class="fas fa-brain fa-3x text-primary mb-3"></i>
-              <h3>Saúde Mental</h3>
+              <h3>Saúde Mental 🧠</h3>
               <p>Técnicas de mindfulness e gestão do estresse</p>
             </div>
           </div>
@@ -214,8 +236,7 @@
         <div class="col">
           <div class="card h-100">
             <div class="card-body">
-              <i class="fas fa-bed fa-3x text-secondary mb-3"></i>
-              <h3>Qualidade do Sono</h3>
+              <h3>Qualidade do Sono 🛌🏻</h3>
               <p>Durma pelo menos 7 horas por noite para recuperação total do corpo</p>
             </div>
           </div>
@@ -223,8 +244,7 @@
         <div class="col">
           <div class="card h-100">
             <div class="card-body">
-              <i class="fas fa-glass-water fa-3x text-info mb-3"></i>
-              <h3>Hidratação</h3>
+              <h3>Hidratação 💧</h3>
               <p>Beba 2 litros de água por dia para manter o corpo ativo e saudável</p>
             </div>
           </div>
@@ -281,6 +301,40 @@
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+
+
+    function calcularIMC() {
+    const peso = parseFloat(document.getElementById('peso').value);
+    const altura = parseFloat(document.getElementById('altura').value);
+    const resultado = document.getElementById('resultadoIMC');
+
+    if (!peso || !altura || altura <= 0) {
+      resultado.textContent = 'Por favor, insira valores válidos.';
+      resultado.classList.add('text-danger');
+      return;
+    }
+
+    const imc = (peso / (altura * altura)).toFixed(2);
+    let classificacao = '';
+
+    if (imc < 18.5) {
+      classificacao = 'Abaixo do peso';
+    } else if (imc < 24.9) {
+      classificacao = 'Peso normal';
+    } else if (imc < 29.9) {
+      classificacao = 'Sobrepeso';
+    } else if (imc < 34.9) {
+      classificacao = 'Obesidade grau I';
+    } else if (imc < 39.9) {
+      classificacao = 'Obesidade grau II';
+    } else {
+      classificacao = 'Obesidade grau III';
+    }
+
+    resultado.textContent = `Seu IMC é ${imc} (${classificacao})`;
+    resultado.classList.remove('text-danger');
+  }
   </script>
 </body>
 </html>
